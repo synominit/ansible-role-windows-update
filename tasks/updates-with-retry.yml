@@ -15,6 +15,7 @@
             reject_list: "{{ _reject_list | default(omit) }}"
             accept_list: "{{ win_update_accept_list | default(omit) }}"
             reboot: yes
+            reboot_timeout: 3600
           register: installed_updates
 
       rescue:
